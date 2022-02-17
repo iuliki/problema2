@@ -6,11 +6,12 @@ namespace problema2
 {
     public static class GeometryUtils
     {
-        public static double Aria(params Shape[] shapes)
+        public static double GetAria(params Shape[] shapes)
         {
             foreach (Shape s in shapes ?? new Shape[0])
             {
-                return Aria();
+
+                return GetAria();
             }
 
             return 0;

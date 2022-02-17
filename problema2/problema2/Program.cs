@@ -30,6 +30,10 @@ namespace problema2
             d.Print();
             p.Print();
 
+            Console.WriteLine("aria pentru  : ");
+            Console.WriteLine(GeometryUtils.GetAria(t,d,p));
+           
+
             Console.WriteLine("Facem move pentru triunghi , dreptungi si pentru patrat : ");
             GeometryUtils.Move(10, 10, t, d,p);
             t.Print();
