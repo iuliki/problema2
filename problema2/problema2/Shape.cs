@@ -4,13 +4,36 @@ using System.Text;
 
 namespace problema2
 {
-    public class Shape
+    public abstract class Shape
     {
-        Point[] puncte = new Point []
+       public abstract Point[] Points
         {
-             Point punct1(1,2),
-             Point punct2(2,3),
+            get;
+        }
 
-        };
+        public abstract double Aria
+        {
+            get;
+        }
+
+        public virtual void Move(double dx, double dy)
+        {
+            foreach (Point p in Points)
+            {
+                p.MoveThePoint(dx, dy);
+            }
+        }
+
+        public virtual void Rotate(double angleD)
+        {
+            foreach (Point p in Points)
+            {
+                p.RotateAngle(angleD);
+            }
+                
+         }
+
+        public abstract void Print();
+       
     }
 }
